@@ -12,3 +12,7 @@ def index(request):
              'num_instances_available':num_instances_available,
              'num_authors':num_authors}
     return render(request, 'index.html', context=context)
+
+
+class BookListView(generic.ListView):
+    model = Book
