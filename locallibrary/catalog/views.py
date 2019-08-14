@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Book, Author, BookInstance, Genre
-
+from django.views import generic
 
 def index(request):
     num_books=Book.objects.all().count()
